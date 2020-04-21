@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Public+Sans&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+nav {    
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+    z-index: 2;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #9698a6;
+    padding: 0;
+    width: 400px;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(to right, hsl(136, 65%, 51%),  hsl(192, 70%, 51%));
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+}
+
+@media all and (min-width: 850px) {
+    nav .hamburger {
+        display: none;
+    }
+}
+@media all and (max-width: 850px) {
+    nav ul, .nav-link {
+        display: none;
+    }
+}
+
+.hero {
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+.hero-flex {
+    min-height: 100vh;
+    background-color: #fafafa;
+    background-image: url('images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media all and (min-width: 490px) {
+    .intro-text {
+        margin-top: 5em;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .intro-text {
+        margin-top: 10em;
+    }
+}
+
+@media all and (min-width: 700px) {
+    .intro-text {
+        margin-top: 22em;
+    }
+}
+
+.mockup {
+    width: 19em;
+}
+
+.intro-text {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+.intro-text p {
+    width: 83%;
+    color: hsl(233, 8%, 62%);
+    word-spacing: 3px;
+}
+.intro-text h1 {
+    font-size: 2.3em;
+    font-weight: 400;
+    color: #2d314d;
+    width: 80%;
+}
+.intro-text p,h1 {
+    margin: 0;
+}
+.intro-text .intro-link {
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(to right, hsl(136, 65%, 51%),  hsl(192, 70%, 51%));
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+@media all and (min-width: 1100px) {
+    .hero-flex {
+        background-image: url('images/bg-intro-desktop.svg');
+        background-position: left 132% bottom 120px;
+        background-size: 47em;
+        flex-direction: row-reverse;
+        width: 100vw;
+        margin: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .mockup {
+        width: 30em;
+        z-index: 0;
+        position: relative;
+        left: 6em;
+        bottom: 4em;
+    }
+    .intro-text {
+        text-align: left;
+        width: 50%;
+        height: 57vh;
+        align-items: flex-start;
+        font-size: 18px;
+        position: relative;
+        bottom: 3em;
+        margin-left: 5em;
+        margin-top: 0;
+    }
+    .intro-text h1 {
+        width: 70%;
+        font-size: 3em;
+    }
+    .intro-text p {
+        font-weight: 100;
+        width: 70%;
+    }
+}
