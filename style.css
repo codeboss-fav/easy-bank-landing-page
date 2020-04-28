@@ -6,6 +6,7 @@ html, body {
     font-family: 'Public Sans', sans-serif;
     font-size: 18px;
     font-weight: 300;
+    background-color: #f4f5f7;
 }
 
 nav {    
@@ -52,7 +53,6 @@ nav a {
 }
 
 .hero {
-    min-height: 100vh;
     background-color: #fafafa;
 }
 .hero-flex {
@@ -114,12 +114,15 @@ nav a {
 .intro-text .intro-link {
     text-decoration: none;
     color: #ffffff;
-    background: linear-gradient(to right, hsl(136, 65%, 51%),  hsl(192, 70%, 51%));
+    background: linear-gradient(to right, #31d35c,  #2bb7da);
     padding: 10px 20px;
     border-radius: 50px;
 }
 
 @media all and (min-width: 1100px) {
+    .hero {
+        height: 75vh;
+    }
     .hero-flex {
         background-image: url('images/bg-intro-desktop.svg');
         background-position: left 132% bottom 120px;
@@ -129,12 +132,13 @@ nav a {
         margin: auto;
         align-items: center;
         justify-content: space-evenly;
+        height: 75vh;
     }
     .mockup {
         width: 30em;
         z-index: 0;
         position: relative;
-        left: 6em;
+        left: 5em;
         bottom: 4em;
     }
     .intro-text {
@@ -155,5 +159,264 @@ nav a {
     .intro-text p {
         font-weight: 100;
         width: 70%;
+    }
+}
+
+/* Benefits section */
+
+#benefits {
+    min-height: 90vh;
+    background-color: #f4f5f7;
+    font-size: 18px;
+}
+.benefits-intro {
+    text-align: center;
+    height: 30vh;
+}
+.benefits-intro h2 {
+    color: #2d314d;
+    font-size: 2em;
+    font-weight: 300;
+}
+.benefits-intro p {
+    color:  #9698a6;
+    width: 300px;
+    margin: auto;
+}
+.benefits-block {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f5f7;
+}
+.ben {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.ben h3,p {
+    margin: 0;
+}
+.ben h3 {
+    font-size: 1.4em;
+    color: #2d314d;
+    font-weight: 300;
+}
+.ben p {
+    color: #9698a6;
+    width: 300px;
+}
+
+@media all and (min-width: 1000px) { 
+    #benefits {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 0 2em;
+    }
+    .benefits-intro {
+        text-align: left;
+        width: 600px;
+        margin-left: 5%;
+        height: 20vh;
+    }
+    .benefits-intro p {
+        margin: 0;
+        width: 600px;
+    }
+    /* .bentro {
+        margin-left: 0;
+    } */
+    .benefits-block {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 95%;
+        margin-left: 2%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .ben {
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        padding: 1em;
+        width: 15em;
+        font-size: 16px;
+    }
+    .ben img {
+        width: 3.5em;
+    }
+    .ben p {
+        width: 250px;
+    }
+}
+
+#article {
+    min-height: 100vh;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.article-heading {
+    width: 85%;
+    margin: 3em auto 1em auto;
+}
+.article-heading h2 {
+    color: #2d314d;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+}
+.posts {
+    min-height: 450px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.post {
+    height: 350px;
+    width: 250px;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+.post img {
+    width: 250px;
+    height: 53%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.post-text {
+    height: 41%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 1em;
+}
+.post-text > * {
+    margin: 0;
+}
+.author {
+    font-size: 11px;
+    color: #9698a6;
+}
+.post-text h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #2d314d;
+}
+.story {
+    font-size: 13px;
+    color: #9698a6;
+}
+
+@media all and (max-width: 1180px) {
+    .posts {
+        justify-content: space-evenly;
+    }
+    .post {
+        margin: 1.3em;
+    }
+    .article-heading h2 {
+        text-align: center;
+    }
+}
+
+footer {
+    min-height: 50vh;
+    background-color: #2d314d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot-flex {
+    min-height: 250px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: #fafafa;
+    font-size: 15px;
+    font-weight: 300;
+}
+.foot-flex ul li {
+    list-style-type: none;
+}
+.foot1 {
+    padding: 0;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.socials {
+    display: flex;
+    width: 160px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.foot2 {
+    padding: 0;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.foot3 {
+    padding: 0;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.foot4 {
+    padding: 0;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 400px;
+    align-items: flex-end;
+}
+.foot-link {
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(to right, hsl(136, 65%, 51%),  hsl(192, 70%, 51%));
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+}
+.foot4 p {
+    color: #9698a6;
+}
+@media all and (max-width: 650px) {
+    .foot-flex {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 18px;
+    }
+    .foot-flex > * {
+        width: 100%;
+        height: 120px;
+        align-items: center;
+    }
+    .foot4 {
+        height: 120px;
     }
 }
