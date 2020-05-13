@@ -80,7 +80,7 @@ nav a {
 }
 
 @media all and (min-width: 850px) {
-    nav .hamburger, .mobile-nav {
+    nav .hamburger, .mobile-nav, .parent {
         display: none;
     }
 }
