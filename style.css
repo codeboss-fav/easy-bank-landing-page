@@ -9,6 +9,12 @@ html, body {
     background-color: #f4f5f7;
 }
 
+.mid-nav a {
+    background: none;
+    color: #9698a6;
+    text-decoration: none;
+}
+
 nav {    
     width: 100vw;
     height: 10vh;
@@ -29,10 +35,11 @@ nav ul {
     align-items: center;
     justify-content: space-between;
     color: #9698a6;
+    background: none;
     padding: 0;
     width: 400px;
 }
-nav a {
+.nav-link {
     text-decoration: none;
     color: #ffffff;
     background: linear-gradient(to right, hsl(136, 65%, 51%),  hsl(192, 70%, 51%));
@@ -57,6 +64,12 @@ nav a {
     box-shadow: 20px 60px 100px hsl(233, 26%, 24%), -20px -10px 100px hsl(233, 26%, 24%);
     display: none;
 }
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #2d314d;
+}
+
 .navtog {
     display: flex;
 }
@@ -423,6 +436,9 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+.foot2, .foot3 a {
+    
 }
 .foot4 {
     padding: 0;
