@@ -19,8 +19,8 @@ nav {
     color: #ffffff;
     font-size: 15px;
     font-weight: 300;
-    z-index: 2;
-    position: relative;
+    z-index: 1;
+    position: fixed;
 }
 
 nav ul {
@@ -41,8 +41,46 @@ nav a {
     border: none;
 }
 
+.mobile-nav {
+    height: 35vh;
+    width: 88vw;
+    background-color: #ffffff;
+    z-index: 2;
+    position: fixed;
+    margin-top: 5em;
+    margin-left: 1em;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    color: #2d314d;
+    font-size: 19px;
+    box-shadow: 20px 60px 100px hsl(233, 26%, 24%), -20px -10px 100px hsl(233, 26%, 24%);
+    display: none;
+}
+.navtog {
+    display: flex;
+}
+.close {
+    display: none;
+}
+.show-close {
+    display: flex;
+}
+.mobile-nav ul {
+    height: 29vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.mobile-nav ul li {
+    list-style-type: none;
+    text-align: center;
+}
+
 @media all and (min-width: 850px) {
-    nav .hamburger {
+    nav .hamburger, .mobile-nav {
         display: none;
     }
 }
@@ -54,6 +92,7 @@ nav a {
 
 .hero {
     background-color: #fafafa;
+    z-index: 1;
 }
 .hero-flex {
     min-height: 100vh;
